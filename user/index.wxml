@@ -1,0 +1,99 @@
+<!-- 登录前 -->
+<view wx:if="{{!loginOK}}">
+  <button bindtap="denglu" type="primary" class="denglu">登录</button>
+  <button bindtap="zhuce" type="primary">注册</button>
+</view>
+<!-- 登录后 -->
+<view wx:else class="login-ok">
+  <view class="user_info_wrap">
+    <view class="user_img_wrap">
+      <image class="user_bg" src="{{data.userImage}}"></image>
+      <view class="user_info">
+        <image class="user_icon" src="{{data.userImage}}"></image>
+        <view class="user_name">{{data.userName}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="user_content">
+    <view class="user_main">
+      <view class="history_warp">
+        <navigator url="../me/index">
+          <view class="iconfont icon-fenxiang"></view>
+          <view class="his_name">个人信息</view>
+        </navigator>
+        <navigator url="../changeme/index">
+          <view class="iconfont icon-fukuantongzhi"></view>
+          <view class="his_name">修改个人信息</view>
+        </navigator>
+        <navigator>
+          <view class="his_num">{{data.balance}}</view>
+          <view class="his_name">账户余额</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont icon-receipt-address"></view>
+          <view class="his_name">我的足迹</view>
+        </navigator>
+      </view>
+      <!-- 商品发布 -->
+      <view class="orders_wrap">
+        <view class="orders_title">我的发布</view>
+        <view class="order_content">
+          <navigator url="../issue/index" open-type="navigate">
+            <view class="iconfont icon-dingdan"></view>
+            <view class="order_name">发布商品</view>
+          </navigator>
+          <navigator url="../mygoods/index" open-type="navigate">
+            <view class="iconfont icon-fukuantongzhi"></view>
+            <view class="order_name">已发布</view>
+          </navigator>
+          <navigator>
+            <view class="iconfont icon-gouwuche"></view>
+            <view class="order_name">待发货</view>
+          </navigator>
+          <navigator>
+            <view class="iconfont icon-tuihuotuikuan_dianpu"></view>
+            <view class="order_name">退款/退货</view>
+          </navigator>
+        </view>
+      </view>
+      <!-- 我的订单 -->
+      <view class="orders_wrap">
+        <view class="orders_title">我的订单</view>
+        <view class="order_content">
+          <navigator url="../order/index" open-type="navigate">
+            <view class="iconfont icon-dingdan"></view>
+            <view class="order_name">全部订单</view>
+          </navigator>
+          <navigator>
+            <view class="iconfont icon-fukuantongzhi"></view>
+            <view class="order_name">待付款</view>
+          </navigator>
+          <navigator>
+            <view class="iconfont icon-gouwuche"></view>
+            <view class="order_name">待收货</view>
+          </navigator>
+          <navigator>
+            <view class="iconfont icon-tuihuotuikuan_dianpu"></view>
+            <view class="order_name">退款/退货</view>
+          </navigator>
+        </view>
+      </view>
+      <!-- 收货地址 -->
+      <navigator url="../address/index">
+        <view class="address_wrap">收货地址管理</view>
+      </navigator>
+      <!-- 应用信息相关 -->
+      <view class="app_info_wrap">
+        <view class="app_info_item app_info_contact">
+          <text>联系客服</text>
+          <text>123-456-789</text>
+        </view>
+        <view class="app_info_item">意见反馈</view>
+        <view class="app_info_item">关于我们</view>
+      </view>
+      <view class="tuichu">
+        <button bindtap="tuichu">退出登录</button>
+      </view>
+    </view>
+  </view>
+</view>

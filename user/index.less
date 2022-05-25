@@ -1,0 +1,106 @@
+/* pages/user/index.wxss */
+page{
+  background-color: #edece8;
+}
+.denglu{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.tuichu{
+  margin-top: 270px;
+}
+.user_info_wrap{
+  height: 42vh;
+  overflow: hidden;
+  background-color: var(--themeColor);
+  .user_img_wrap{
+    position: relative;
+    .user_bg{
+      height: 45vh;
+      //高斯模糊
+      filter: blur(10rpx);
+    }
+    .user_info{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 25%;
+      text-align: center;
+      .user_icon{
+        width: 152rpx;
+        height: 152rpx;
+        border-radius: 50%;
+      }
+        .user_name{
+          color: #fff;
+          margin-top: 40rpx;
+          font-size: 38rpx;
+        }
+      
+    }
+  }
+}
+.user_content{
+  position: relative;
+  .user_main{
+    color: #666;
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -38rpx;
+    .history_warp{
+      background-color: #fff;
+      display: flex;
+      navigator{
+        flex: 1;
+        text-align: center;
+        padding: 10rpx 0;
+        .his_num{
+          color:var(--themeColor);
+        }
+        .his_name{
+
+        }
+      }
+    }
+    .orders_wrap{
+      background-color: #fff;
+      margin-top: 30rpx;
+      .orders_title{
+        padding: 20rpx;
+        border-bottom: 1rpx solid #ccc;
+      }
+      .order_content{
+        display: flex;
+        navigator{
+          flex: 1;
+          text-align: center;
+          padding: 20rpx 0;
+          .iconfont{
+            color: var(--themeColor);
+          }
+          .order_name{}
+        }
+      }
+    }
+    .address_wrap{
+      margin-top: 30rpx;
+      background-color: #fff;
+      padding: 20rpx;
+
+    }
+    .app_info_wrap{
+      margin-top: 30rpx;
+      background-color: #fff;
+      .app_info_item{
+        padding: 20rpx;
+        border-bottom: 1rpx solid #ccc;
+      }
+      .app_info_contact{
+        display: flex;
+        justify-content: space-between;//两边对齐
+      }
+    }
+  }
+}
