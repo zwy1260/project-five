@@ -1,0 +1,7 @@
+.input{
+  border:1px solid gainsboro;
+  margin: 15rpx;
+}
+.denglu{
+  margin-bottom: 10px;
+}

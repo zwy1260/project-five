@@ -1,0 +1,5 @@
+<view >输入手机号:</view>
+<input class="input" bindinput="getName"/>
+<view >输入密码:</view>
+<input class="input" bindinput="getMiMa" password="true"/>
+<button bindtap="denglu" type="primary" class="denglu" >登录</button>
