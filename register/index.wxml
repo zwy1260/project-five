@@ -1,0 +1,6 @@
+<!--pages/register/index.wxml-->
+<view >输入手机号:</view>
+<input class="input" bindinput="getName"/>
+<view >输入密码:</view>
+<input class="input" bindinput="getMiMa"/>
+<button bindtap="zhuce" type="primary">注册</button>
