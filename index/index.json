@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Searchinput":"../../components/Searchinput/Searchinput"
+  },
+  "navigationBarTitleText": "rko商城首页"
+}

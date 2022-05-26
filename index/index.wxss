@@ -1,0 +1,119 @@
+.pyg_lunbo image {
+  width: 750rpx;
+}
+.index_floor .floor_group .floor_title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--themeColor);
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.first_tab .goods_item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.first_tab .goods_item .goods_img_wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first_tab .goods_item .goods_img_wrap image {
+  width: 70%;
+}
+.first_tab .goods_item .goods_info_wrap {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.first_tab .goods_item .goods_info_wrap .goods_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.first_tab .goods_item .goods_info_wrap .goods_price {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}
+
+
+.wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.wrap .product{
+  width: 46%;
+  background: #f9f9f9;
+  border-radius: 16rpx;
+  margin: 6rpx 10rpx;
+}
+.product .grid-img{
+  width: 250rpx;
+  height: 250rpx;
+  margin: 50rpx auto 0;
+  overflow: hidden;
+}
+.product .grid-img image{
+  width: 250rpx;
+}
+.product .user-img{
+  width: 300rpx;
+  height: 60rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  /* 边框 */
+  border-radius: 25rpx;
+  border: 1rpx solid #ccc;
+  display: flex;
+}
+.product .user-img image{
+  width: 50rpx;
+}
+.product .user-img .user-name{
+  font-size: 30rpx;
+  color: #333;
+  margin-left: 10rpx;
+  margin-top: 5rpx;
+}
+.product .info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0;
+  line-height: 2;
+  text-align: center;
+}
+.info .name{
+  color: #3a3a3a;
+  font-size: 28rpx;
+}
+.info .price{
+  color: #d0021b;
+  font-size: 26rpx;
+}
+
+.back-top{
+  position: fixed;
+  bottom: 50rpx;
+  right: 50rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, .3);
+  line-height: 80rpx;
+  text-align: center;
+  font-weight: bold;
+  color: #576b95;
+}
+
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
