@@ -1,0 +1,43 @@
+<!-- pages/goods_detail/index.wxml -->
+<view class="detail_swiper">
+    <view wx:if="{{detail.image}}">
+        <image src="http://rbpu5026u.hn-bkt.clouddn.com/{{detail.image}}" mode="widthFix"></image>
+    </view>
+</view>
+<view class="goods_price">¥{{detail.price}}</view>
+<view class="goods_name_row">
+    <view class="goods_name">
+        {{detail.title}}
+    <text>\n{{detail.details}}</text>
+    </view>
+    <view class="goods_collect">
+        <text class="iconfont icon-shoucang"></text>
+        <view class=".collect_text">收藏</view>
+    </view>
+</view>
+<view class="goods_info">
+    <view class="goods_info_title">图文详情</view>
+</view>
+<!--底部工具栏-->
+<view class="btm-tool">
+    <navigator class="tool_item">
+        
+        <view class="iconfont icon-kefu"></view>
+        <view >客服</view>
+        
+    </navigator>
+    <navigator class="tool_item">
+        <view class="iconfont icon-fenxiang"></view>
+        <view >分享</view>
+    </navigator>
+    <navigator class="tool_item" url="../cart/index" open-type="switchTab">
+        <view class="iconfont icon-gouwuche"></view>
+        <view >购物车</view>
+    </navigator>
+    <view class="tool_item btn_cart" bindtap="handleCartAdd">
+        加入购物车
+    </view>
+    <view class="tool_item btn_buy" bindtap="buy">
+        立即购买
+    </view>
+</view>
