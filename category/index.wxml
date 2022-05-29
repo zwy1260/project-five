@@ -1,0 +1,24 @@
+<view class="container">
+    <view class="type">
+        <view class="type-item {{curIndex==index ? 'cur' : ''}}" wx:for="{{type}}" wx:key="id" bindtap="chooseType" id="{{item.id}}">
+            <text>{{item.name}}</text>
+        </view>
+    </view>
+    <scroll-view scroll-y class="list">
+        <view class="list-item" wx:for="{{productList}}" wx:key="id">
+            <view class="img-wrap">
+                <navigator url="../goods_detail/index?commodityId={{item.commodityId}}" class="product" wx:key="commodityId">
+                    <image src="http://rbpu5026u.hn-bkt.clouddn.com/{{item.image}}" mode="widthFix"></image>
+                </navigator>
+            </view>
+            <view class="info">
+                <navigator class="user-img" url="../shop/index?phone={{item.user.phone}}&userName={{item.user.userName}}&userImage={{item.user.userImage}}">
+                    <image src="{{item.user.userImage}}" mode="widthFix"></image>
+                    <text class="user-name">{{item.user.userName}}</text>
+                </navigator>
+                <text class="name">{{item.title}}</text>
+                <text class="price">￥{{item.price}}</text>
+            </view>
+        </view>
+    </scroll-view>
+</view>
