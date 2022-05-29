@@ -1,0 +1,35 @@
+<!-- 搜索框view -->
+<view class="search_con">
+    <!-- 表单 -->
+    <form bindsubmit="formSubmit">
+        <!-- 记得设置name值，这样JS才能接收name=keyword的值 -->
+        <input type="text" name="keyword" class="search_input" placeholder='请输入商品名称' />
+        <button formType="submit" class="search_btn">搜索</button>
+    </form>
+</view>
+<view wx:if="{{infoList.length>0}}">
+    <view class="index_floor">
+        <view class="floor_group">
+            <!-- 标题 -->
+            <view class="floor_title">商品列表</view>
+        </view>
+    </view>
+    <view class="wrap">
+        <view class="product" wx:for="{{infoList}}" wx:key="commodityId">
+            <navigator class="user-img" url="../shop/index?phone={{item.user.phone}}&userName={{item.user.userName}}&userImage={{item.user.userImage}}">
+                <image src="{{item.user.userImage}}" mode="widthFix"></image>
+                <text class="user-name">{{item.user.userName}}</text>
+            </navigator>
+            <view class="grid-img">
+                <navigator url="../goods_detail/index?commodityId={{item.commodityId}}">
+                    <image src="http://rbpu5026u.hn-bkt.clouddn.com/{{item.image}}" mode="widthFix"></image>
+                </navigator>
+            </view>
+            <view class="info">
+                <text class="name">{{item.title}}</text>
+                <text class="price">￥{{item.price}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="back-top" wx:if="{{showBackTop}}" bindtap="backTop">top</view>
